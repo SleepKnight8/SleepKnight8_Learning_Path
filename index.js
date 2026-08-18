@@ -1,37 +1,3 @@
-function setTheme(theme) {
-
-    if (theme === "purple") {
-
-        document.body.classList.add("purple-mode");
-
-        localStorage.setItem("theme", "purple");
-
-    } else {
-
-        document.body.classList.remove("purple-mode");
-
-        localStorage.setItem("theme", "yellow");
-
-    }
-
-}
-
-
-// Remember selected theme
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "purple") {
-
-    setTheme("purple");
-
-} else {
-
-    setTheme("yellow");
-
-}
-
-
 // Set your start date
 const startDate = new Date('2022-12-30');
 
