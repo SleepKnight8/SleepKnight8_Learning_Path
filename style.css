@@ -3,9 +3,7 @@
    ========================= */
 
 * {
-
     box-sizing: border-box;
-
 }
 
 
@@ -16,7 +14,6 @@
 body {
 
     margin: 0;
-
     padding: 0;
 
     min-height: 100vh;
@@ -38,7 +35,6 @@ body {
     transition:
         background 0.3s ease,
         color 0.3s ease;
-
 }
 
 
@@ -51,82 +47,9 @@ body {
     text-align: center;
 
     padding:
-        80px
+        30px
         2vw
         40px;
-
-}
-
-
-/* =========================
-   HEADINGS
-   ========================= */
-
-#main h1 {
-
-    font-size:
-        clamp(
-            30px,
-            6vw,
-            80px
-        );
-
-    margin:
-        0.5vw
-        0;
-
-    font-weight: 700;
-
-}
-
-
-#main h2 {
-
-    font-size:
-        clamp(
-            24px,
-            5vw,
-            60px
-        );
-
-    margin:
-        1vw
-        0;
-
-    font-weight: 600;
-
-}
-
-
-#main h3,
-#main h4,
-#main h5,
-#main h6 {
-
-    font-weight: 500;
-
-    margin:
-        0.5vw
-        0;
-
-}
-
-
-/* =========================
-   DAYS COUNTER
-   ========================= */
-
-#days-count {
-
-    font-size:
-        clamp(
-            24px,
-            4vw,
-            60px
-        );
-
-    font-weight: bold;
-
 }
 
 
@@ -135,13 +58,18 @@ body {
    ========================= */
 
 .theme-switch {
+
     display: flex;
+
     justify-content: center;
+
+    align-items: center;
+
     gap: 10px;
 
-    margin-top: 20px;
     margin-bottom: 20px;
 }
+
 
 .theme-switch button {
 
@@ -165,14 +93,80 @@ body {
         transform 0.2s ease,
         background 0.3s ease,
         border 0.3s ease;
-
 }
 
 
 .theme-switch button:hover {
 
     transform: scale(1.1);
+}
 
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+#main h1 {
+
+    font-size:
+        clamp(
+            30px,
+            6vw,
+            80px
+        );
+
+    margin:
+        0.5vw
+        0;
+
+    font-weight: 700;
+}
+
+
+#main h2 {
+
+    font-size:
+        clamp(
+            24px,
+            5vw,
+            60px
+        );
+
+    margin:
+        1vw
+        0;
+
+    font-weight: 600;
+}
+
+
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+
+    font-weight: 500;
+
+    margin:
+        0.5vw
+        0;
+}
+
+
+/* =========================
+   DAYS COUNTER
+   ========================= */
+
+#days-count {
+
+    font-size:
+        clamp(
+            24px,
+            4vw,
+            60px
+        );
+
+    font-weight: bold;
 }
 
 
@@ -204,7 +198,6 @@ body {
     padding:
         0
         1vw;
-
 }
 
 
@@ -227,7 +220,6 @@ body {
         box-shadow 0.3s ease,
         background 0.3s ease,
         border 0.3s ease;
-
 }
 
 
@@ -246,14 +238,6 @@ body {
             0,
             0.6
         );
-
-}
-
-
-.link-card pre {
-
-    color: inherit;
-
 }
 
 
@@ -270,7 +254,6 @@ img {
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
-
 }
 
 
@@ -289,7 +272,6 @@ img:hover {
             0,
             0.4
         );
-
 }
 
 
@@ -302,7 +284,6 @@ img:hover {
     display: flex;
 
     justify-content: center;
-
 }
 
 
@@ -322,7 +303,6 @@ img:hover {
             0,
             0.6
         );
-
 }
 
 
@@ -337,7 +317,6 @@ img:hover {
     border-radius: 50%;
 
     margin-top: 20px;
-
 }
 
 
@@ -349,7 +328,6 @@ img:hover {
 
     transition:
         color 0.3s ease;
-
 }
 
 
@@ -364,7 +342,6 @@ ul {
     padding-left: 0;
 
     font-size: 70%;
-
 }
 
 
@@ -377,11 +354,8 @@ body.purple-mode {
     background: #101010;
 
     color: #b58cff;
-
 }
 
-
-/* Headings */
 
 body.purple-mode #main h1,
 body.purple-mode #main h2,
@@ -391,11 +365,8 @@ body.purple-mode #main h5,
 body.purple-mode #main h6 {
 
     color: #b58cff;
-
 }
 
-
-/* Cards */
 
 body.purple-mode .link-card {
 
@@ -404,11 +375,8 @@ body.purple-mode .link-card {
     border:
         2px solid
         #b58cff;
-
 }
 
-
-/* Theme buttons */
 
 body.purple-mode .theme-switch button {
 
@@ -417,11 +385,8 @@ body.purple-mode .theme-switch button {
     border:
         2px solid
         #b58cff;
-
 }
 
-
-/* Image hover */
 
 body.purple-mode img:hover {
 
@@ -435,16 +400,12 @@ body.purple-mode img:hover {
             255,
             0.5
         );
-
 }
 
-
-/* Copyright */
 
 body.purple-mode #copyright {
 
     color: #b58cff;
-
 }
 
 
@@ -456,24 +417,16 @@ body.purple-mode #copyright {
 
     #main {
 
-        padding-top: 70px;
-
+        padding:
+            20px
+            10px
+            30px;
     }
 
 
     .link-row {
 
         grid-template-columns: 1fr;
-
-    }
-
-
-    .theme-switch {
-
-        top: 10px;
-
-        right: 10px;
-
     }
 
 }
