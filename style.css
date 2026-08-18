@@ -11,10 +11,17 @@
    BODY
    ========================= */
 
+html,
 body {
 
     margin: 0;
     padding: 0;
+
+    min-height: 100%;
+
+}
+
+body {
 
     min-height: 100vh;
 
@@ -35,21 +42,7 @@ body {
     transition:
         background 0.3s ease,
         color 0.3s ease;
-}
 
-
-/* =========================
-   MAIN
-   ========================= */
-
-#main {
-
-    text-align: center;
-
-    padding:
-        30px
-        2vw
-        40px;
 }
 
 
@@ -59,6 +52,8 @@ body {
 
 .theme-switch {
 
+    width: 100%;
+
     display: flex;
 
     justify-content: center;
@@ -67,7 +62,8 @@ body {
 
     gap: 10px;
 
-    margin-bottom: 20px;
+    padding: 20px 0;
+
 }
 
 
@@ -75,9 +71,17 @@ body {
 
     width: 45px;
 
-    height: 40px;
+    height: 45px;
 
-    padding: 5px;
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 
     border: none;
 
@@ -85,20 +89,40 @@ body {
 
     background: #1a1f27;
 
-    font-size: 20px;
-
     cursor: pointer;
+
+    font-size: 20px;
 
     transition:
         transform 0.2s ease,
-        background 0.3s ease,
-        border 0.3s ease;
+        background 0.2s ease;
+
 }
 
 
 .theme-switch button:hover {
 
     transform: scale(1.1);
+
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+#main {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    text-align: center;
+
 }
 
 
@@ -109,47 +133,35 @@ body {
 #main h1 {
 
     font-size:
-        clamp(
-            30px,
-            6vw,
-            80px
-        );
+        clamp(30px, 6vw, 80px);
 
     margin:
-        0.5vw
-        0;
+        10px 0;
 
     font-weight: 700;
+
 }
 
 
 #main h2 {
 
     font-size:
-        clamp(
-            24px,
-            5vw,
-            60px
-        );
+        clamp(24px, 5vw, 60px);
 
     margin:
-        1vw
-        0;
+        20px 0;
 
     font-weight: 600;
+
 }
 
 
 #main h3,
-#main h4,
-#main h5,
-#main h6 {
-
-    font-weight: 500;
+#main h4 {
 
     margin:
-        0.5vw
-        0;
+        8px 0;
+
 }
 
 
@@ -160,44 +172,39 @@ body {
 #days-count {
 
     font-size:
-        clamp(
-            24px,
-            4vw,
-            60px
-        );
+        clamp(24px, 4vw, 60px);
 
     font-weight: bold;
+
 }
 
 
 /* =========================
-   LINK GRID
+   CARDS GRID
    ========================= */
 
 .link-row {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin:
+        30px auto;
+
+    padding:
+        0 10px;
 
     display: grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(
-                250px,
-                1fr
-            )
+            minmax(250px, 1fr)
         );
 
-    gap: 3rem;
+    gap: 30px;
 
-    max-width: 1200px;
-
-    margin:
-        2vw
-        auto;
-
-    padding:
-        0
-        1vw;
 }
 
 
@@ -211,15 +218,14 @@ body {
 
     border-radius: 15px;
 
-    padding: 1.5em;
+    padding: 25px;
 
     text-align: center;
 
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease,
-        border 0.3s ease;
+        box-shadow 0.3s ease;
+
 }
 
 
@@ -229,15 +235,23 @@ body {
         translateY(-6px);
 
     box-shadow:
-        0
-        15px
-        35px
-        rgba(
-            0,
-            0,
-            0,
-            0.6
-        );
+        0 15px 35px
+        rgba(0, 0, 0, 0.6);
+
+}
+
+
+.link-card pre {
+
+    color: inherit;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
 }
 
 
@@ -247,13 +261,14 @@ body {
 
 img {
 
-    width: 100%;
+    max-width: 100%;
 
     border-radius: 12px;
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+
 }
 
 
@@ -263,15 +278,9 @@ img:hover {
         scale(1.05);
 
     box-shadow:
-        0
-        0
-        20px
-        rgba(
-            255,
-            255,
-            0,
-            0.4
-        );
+        0 0 20px
+        rgba(255, 255, 0, 0.4);
+
 }
 
 
@@ -281,28 +290,49 @@ img:hover {
 
 .path-container {
 
+    width: 100%;
+
     display: flex;
 
     justify-content: center;
+
 }
 
 
 .path-image {
+
+    width: 100%;
 
     max-width: 900px;
 
     border-radius: 16px;
 
     box-shadow:
-        0
-        15px
-        40px
-        rgba(
-            0,
-            0,
-            0,
-            0.6
-        );
+        0 15px 40px
+        rgba(0, 0, 0, 0.6);
+
+}
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+#main a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+#main a:hover {
+
+    text-decoration: underline;
+
 }
 
 
@@ -310,38 +340,29 @@ img:hover {
    DEVELOPER
    ========================= */
 
-.logo {
+.developer {
 
-    width: 150px;
+    font-size: 20px;
 
-    border-radius: 50%;
+    display: inline-block;
 
-    margin-top: 20px;
-}
+    margin-top: 5px;
 
-
-#copyright {
-
-    color: #f5e05a;
-
-    font-weight: bold;
-
-    transition:
-        color 0.3s ease;
 }
 
 
 /* =========================
-   LIST
+   COPYRIGHT
    ========================= */
 
-ul {
+#copyright {
 
-    list-style: none;
+    margin-top: 30px;
 
-    padding-left: 0;
+    font-size: 14px;
 
-    font-size: 70%;
+    color: inherit;
+
 }
 
 
@@ -354,17 +375,7 @@ body.purple-mode {
     background: #101010;
 
     color: #b58cff;
-}
 
-
-body.purple-mode #main h1,
-body.purple-mode #main h2,
-body.purple-mode #main h3,
-body.purple-mode #main h4,
-body.purple-mode #main h5,
-body.purple-mode #main h6 {
-
-    color: #b58cff;
 }
 
 
@@ -373,60 +384,57 @@ body.purple-mode .link-card {
     background: #101010;
 
     border:
-        2px solid
-        #b58cff;
+        2px solid #b58cff;
+
 }
 
 
-body.purple-mode .theme-switch button {
+body.purple-mode
+.theme-switch button {
 
     background: #101010;
 
     border:
-        2px solid
-        #b58cff;
+        2px solid #b58cff;
+
 }
 
 
 body.purple-mode img:hover {
 
     box-shadow:
-        0
-        0
-        20px
-        rgba(
-            181,
-            140,
-            255,
-            0.5
-        );
-}
+        0 0 20px
+        rgba(181, 140, 255, 0.4);
 
-
-body.purple-mode #copyright {
-
-    color: #b58cff;
 }
 
 
 /* =========================
-   RESPONSIVE
+   MOBILE
    ========================= */
 
 @media (max-width: 600px) {
 
     #main {
 
+        padding: 15px;
+
+    }
+
+
+    .theme-switch {
+
         padding:
-            20px
-            10px
-            30px;
+            15px 0;
+
     }
 
 
     .link-row {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+
     }
 
 }
