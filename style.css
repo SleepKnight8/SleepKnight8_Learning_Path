@@ -1,73 +1,43 @@
 /* =========================
-   BASE
+   RESET
    ========================= */
 
 * {
+
     box-sizing: border-box;
-}
 
-body {
-
-    background: linear-gradient(
-        135deg,
-        #13171c 0%,
-        #1b2028 100%
-    );
-
-    color: #f5e05a;
-
-    margin: 0;
-    padding: 0;
-
-    font-family: Arial, sans-serif;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
 }
 
 
 /* =========================
-   THEME SWITCH
+   BODY
    ========================= */
 
-.theme-switch {
+body {
 
-    position: fixed;
+    margin: 0;
 
-    top: 20px;
-    right: 20px;
+    padding: 0;
 
-    display: flex;
+    min-height: 100vh;
 
-    gap: 10px;
+    background:
+        linear-gradient(
+            135deg,
+            #13171c 0%,
+            #1b2028 100%
+        );
 
-    z-index: 1000;
-}
+    color: #f5e05a;
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-.theme-switch button {
-
-    width: 45px;
-    height: 40px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background: #1a1f27;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-.theme-switch button:hover {
-
-    transform: scale(1.1);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 
 }
 
@@ -80,27 +50,51 @@ body {
 
     text-align: center;
 
-    padding: 70px 2vw 30px;
+    padding:
+        80px
+        2vw
+        40px;
+
 }
 
 
+/* =========================
+   HEADINGS
+   ========================= */
+
 #main h1 {
 
-    font-size: clamp(30px, 6vw, 80px);
+    font-size:
+        clamp(
+            30px,
+            6vw,
+            80px
+        );
 
-    margin: 0.5vw 0;
+    margin:
+        0.5vw
+        0;
 
     font-weight: 700;
+
 }
 
 
 #main h2 {
 
-    font-size: clamp(24px, 5vw, 60px);
+    font-size:
+        clamp(
+            24px,
+            5vw,
+            60px
+        );
 
-    margin: 1vw 0;
+    margin:
+        1vw
+        0;
 
     font-weight: 600;
+
 }
 
 
@@ -111,7 +105,10 @@ body {
 
     font-weight: 500;
 
-    margin: 0.5vw 0;
+    margin:
+        0.5vw
+        0;
+
 }
 
 
@@ -121,14 +118,74 @@ body {
 
 #days-count {
 
-    font-size: clamp(24px, 4vw, 60px);
+    font-size:
+        clamp(
+            24px,
+            4vw,
+            60px
+        );
 
     font-weight: bold;
+
 }
 
 
 /* =========================
-   GRID
+   THEME SWITCH
+   ========================= */
+
+.theme-switch {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    display: flex;
+
+    gap: 10px;
+
+    z-index: 9999;
+
+}
+
+
+.theme-switch button {
+
+    width: 45px;
+
+    height: 40px;
+
+    padding: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1a1f27;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.3s ease,
+        border 0.3s ease;
+
+}
+
+
+.theme-switch button:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* =========================
+   LINK GRID
    ========================= */
 
 .link-row {
@@ -136,15 +193,26 @@ body {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(
+                250px,
+                1fr
+            )
+        );
 
     gap: 3rem;
 
     max-width: 1200px;
 
-    margin: 2vw auto;
+    margin:
+        2vw
+        auto;
 
-    padding: 0 1vw;
+    padding:
+        0
+        1vw;
+
 }
 
 
@@ -165,16 +233,35 @@ body {
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,
-        background 0.3s ease;
+        background 0.3s ease,
+        border 0.3s ease;
+
 }
 
 
 .link-card:hover {
 
-    transform: translateY(-6px);
+    transform:
+        translateY(-6px);
 
     box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.6);
+        0
+        15px
+        35px
+        rgba(
+            0,
+            0,
+            0,
+            0.6
+        );
+
+}
+
+
+.link-card pre {
+
+    color: inherit;
+
 }
 
 
@@ -191,15 +278,26 @@ img {
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+
 }
 
 
 img:hover {
 
-    transform: scale(1.05);
+    transform:
+        scale(1.05);
 
     box-shadow:
-        0 0 20px rgba(255, 255, 0, 0.4);
+        0
+        0
+        20px
+        rgba(
+            255,
+            255,
+            0,
+            0.4
+        );
+
 }
 
 
@@ -212,6 +310,7 @@ img:hover {
     display: flex;
 
     justify-content: center;
+
 }
 
 
@@ -222,7 +321,16 @@ img:hover {
     border-radius: 16px;
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.6);
+        0
+        15px
+        40px
+        rgba(
+            0,
+            0,
+            0,
+            0.6
+        );
+
 }
 
 
@@ -237,16 +345,19 @@ img:hover {
     border-radius: 50%;
 
     margin-top: 20px;
+
 }
 
 
 #copyright {
 
-    margin-top: 20px;
+    color: #f5e05a;
 
     font-weight: bold;
 
-    color: #f5e05a;
+    transition:
+        color 0.3s ease;
+
 }
 
 
@@ -261,6 +372,7 @@ ul {
     padding-left: 0;
 
     font-size: 70%;
+
 }
 
 
@@ -273,36 +385,74 @@ body.purple-mode {
     background: #101010;
 
     color: #b58cff;
+
 }
 
+
+/* Headings */
+
+body.purple-mode #main h1,
+body.purple-mode #main h2,
+body.purple-mode #main h3,
+body.purple-mode #main h4,
+body.purple-mode #main h5,
+body.purple-mode #main h6 {
+
+    color: #b58cff;
+
+}
+
+
+/* Cards */
 
 body.purple-mode .link-card {
 
     background: #101010;
 
-    border: 2px solid #b58cff;
+    border:
+        2px solid
+        #b58cff;
 
 }
 
+
+/* Theme buttons */
 
 body.purple-mode .theme-switch button {
 
     background: #101010;
 
-    border: 2px solid #b58cff;
+    border:
+        2px solid
+        #b58cff;
+
 }
 
+
+/* Image hover */
 
 body.purple-mode img:hover {
 
     box-shadow:
-        0 0 20px rgba(181, 140, 255, 0.5);
+        0
+        0
+        20px
+        rgba(
+            181,
+            140,
+            255,
+            0.5
+        );
+
 }
 
+
+/* Copyright */
 
 body.purple-mode #copyright {
 
     color: #b58cff;
+
 }
 
 
@@ -312,15 +462,24 @@ body.purple-mode #copyright {
 
 @media (max-width: 600px) {
 
+    #main {
+
+        padding-top: 70px;
+
+    }
+
+
     .link-row {
 
         grid-template-columns: 1fr;
 
     }
 
+
     .theme-switch {
 
         top: 10px;
+
         right: 10px;
 
     }
