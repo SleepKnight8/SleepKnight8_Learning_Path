@@ -135,21 +135,13 @@ body {
    ========================= */
 
 .theme-switch {
-
-    position: fixed;
-
-    top: 20px;
-
-    right: 20px;
-
     display: flex;
-
+    justify-content: center;
     gap: 10px;
 
-    z-index: 9999;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
 
 .theme-switch button {
 
