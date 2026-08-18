@@ -18,30 +18,26 @@
 
 <body>
 
-    <!-- =========================
-         THEME SWITCH
-         ========================= -->
+    <!-- THEME SWITCH -->
 
     <div class="theme-switch">
 
         <button
-            onclick="setTheme('yellow')"
-            title="Yellow Theme">
+            type="button"
+            id="yellowMode">
             🟡
         </button>
 
         <button
-            onclick="setTheme('purple')"
-            title="Purple Theme">
+            type="button"
+            id="purpleMode">
             🟣
         </button>
 
     </div>
 
 
-    <!-- =========================
-         MAIN
-         ========================= -->
+    <!-- MAIN -->
 
     <div id="main">
 
@@ -73,16 +69,11 @@
         <br>
 
 
-        <!-- =========================
-             ALGORITHMIC THINKING
-             ========================= -->
-
-        <h2>
-            Learn/Do Algorithmic Thinking
-        </h2>
+        <h2>Learn/Do Algorithmic Thinking</h2>
 
         <br>
         <br>
+
 
         <div class="link-row">
 
@@ -160,16 +151,11 @@
         <br>
 
 
-        <!-- =========================
-             GITHUB REPOS
-             ========================= -->
-
-        <h2>
-            Helpful Github Repos
-        </h2>
+        <h2>Helpful Github Repos</h2>
 
         <br>
         <br>
+
 
         <div class="link-row">
 
@@ -230,16 +216,11 @@
         <br>
 
 
-        <!-- =========================
-             MATH
-             ========================= -->
-
-        <h2>
-            Math Things
-        </h2>
+        <h2>Math Things</h2>
 
         <br>
         <br>
+
 
         <div class="link-row">
 
@@ -266,16 +247,11 @@
         <br>
 
 
-        <!-- =========================
-             MACHINE LEARNING
-             ========================= -->
-
-        <h2>
-            Machine Learning Book
-        </h2>
+        <h2>Machine Learning Book</h2>
 
         <br>
         <br>
+
 
         <div class="link-row">
 
@@ -302,15 +278,10 @@
         <br>
 
 
-        <!-- =========================
-             RECENTLY READING
-             ========================= -->
-
-        <h2>
-            Recently Reading
-        </h2>
+        <h2>Recently Reading</h2>
 
         <br>
+
 
         <ul>
 
@@ -331,15 +302,10 @@
         <br>
 
 
-        <!-- =========================
-             PATH
-             ========================= -->
-
-        <h2>
-            The Path in Pic
-        </h2>
+        <h2>The Path in Pic</h2>
 
         <br>
+
 
         <div class="path-container">
 
@@ -355,15 +321,10 @@
         <br>
 
 
-        <!-- =========================
-             DEVELOPER
-             ========================= -->
-
-        <h2>
-            The Best Developer
-        </h2>
+        <h2>The Best Developer</h2>
 
         <br>
+
 
         <a
             href="https://github.com/sleepknight8"
@@ -384,6 +345,85 @@
 
     </div>
 
+
+    <!-- THEME JAVASCRIPT -->
+
+    <script>
+
+        const yellowButton =
+            document.getElementById("yellowMode");
+
+        const purpleButton =
+            document.getElementById("purpleMode");
+
+
+        function setTheme(theme) {
+
+            if (theme === "purple") {
+
+                document.body.classList.add("purple-mode");
+
+                localStorage.setItem(
+                    "theme",
+                    "purple"
+                );
+
+            } else {
+
+                document.body.classList.remove(
+                    "purple-mode"
+                );
+
+                localStorage.setItem(
+                    "theme",
+                    "yellow"
+                );
+
+            }
+
+        }
+
+
+        yellowButton.addEventListener(
+            "click",
+            function () {
+
+                setTheme("yellow");
+
+            }
+        );
+
+
+        purpleButton.addEventListener(
+            "click",
+            function () {
+
+                setTheme("purple");
+
+            }
+        );
+
+
+        // Load saved theme
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+
+        if (savedTheme === "purple") {
+
+            setTheme("purple");
+
+        } else {
+
+            setTheme("yellow");
+
+        }
+
+    </script>
+
+
+    <!-- Your other JavaScript -->
 
     <script src="index.js"></script>
 
