@@ -1,13 +1,25 @@
 /* =========================
+   LAYOUT
+   ========================= */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+
+/* =========================
    THEME SWITCH
    ========================= */
 
 .theme-switch {
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 10px;
+
     padding: 20px 0;
 }
 
@@ -15,84 +27,128 @@
     width: 45px;
     height: 45px;
 
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: none;
     border-radius: 10px;
-
-    background: #1a1f27;
-
-    cursor: pointer;
 
     font-size: 20px;
 }
 
 
 /* =========================
-   YELLOW THEME
+   MAIN
    ========================= */
 
-body {
-    background: linear-gradient(
-        135deg,
-        #13171c 0%,
-        #1b2028 100%
-    );
-
-    color: #f5e05a;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
+#main {
+    max-width: 1100px;
+    margin: auto;
 }
 
 
 /* =========================
-   PURPLE THEME
+   LINK SECTIONS
    ========================= */
 
-body.purple-mode {
+.link-row {
+    display: grid;
 
-    background: #101010;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
 
-    color: #b58cff;
+    gap: 25px;
 
+    margin: 30px 0 60px;
 }
 
 
-/* Purple cards */
+/* =========================
+   LINK CARDS
+   ========================= */
 
-body.purple-mode .link-card {
+.link-card {
+    padding: 20px;
 
-    background: #101010;
+    border: 2px solid;
 
-    border: 2px solid #b58cff;
+    border-radius: 15px;
 
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px;
+}
+
+.link-card img {
+    width: 150px;
+    max-width: 100%;
+
+    border-radius: 10px;
+
+    transition: transform .3s ease;
+}
+
+.link-card img:hover {
+    transform: scale(1.05);
 }
 
 
-/* Purple theme buttons */
+/* =========================
+   PATH IMAGE
+   ========================= */
 
-body.purple-mode .theme-switch button {
+.path-container {
+    max-width: 900px;
+    margin: auto;
+}
 
-    background: #101010;
+.path-image {
+    width: 100%;
+    max-width: 900px;
 
-    border: 2px solid #b58cff;
+    border-radius: 15px;
 
+    transition: transform .3s ease;
+}
+
+.path-image:hover {
+    transform: scale(1.02);
 }
 
 
-/* Purple image hover */
+/* =========================
+   DEVELOPER
+   ========================= */
 
-body.purple-mode img:hover {
+.developer {
+    display: inline-block;
 
-    box-shadow:
-        0 0 20px
-        rgba(181, 140, 255, 0.4);
+    margin: 20px 0;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .link-row {
+        grid-template-columns: 1fr;
+    }
+
+    .link-card img {
+        width: 130px;
+    }
 
 }
